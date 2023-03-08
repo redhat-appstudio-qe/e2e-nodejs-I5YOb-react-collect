@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-health-check-se2y
+  namespace: e2e-demos-pogv-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:d8e2614697bc3ca91ec4a1fa561a60772cc277dda08e14e293c85168f6c187e1
+        name: my-nodejs
+        resources: {}
+status: {}
